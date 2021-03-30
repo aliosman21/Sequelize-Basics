@@ -25,13 +25,6 @@ module.exports = {
             allowNull: false,
             type: Sequelize.DATE,
          },
-         staff_id: {
-            type: Sequelize.INTEGER,
-            references: {
-               model: "staffs",
-               key: "id",
-            },
-         },
       });
    },
    down: async (queryInterface, Sequelize) => {
