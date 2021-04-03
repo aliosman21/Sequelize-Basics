@@ -25,13 +25,6 @@ module.exports = {
             allowNull: false,
             type: Sequelize.DATE,
          },
-         /*  manager_id: {
-            type: Sequelize.INTEGER,
-            references: {
-               model: "managers",
-               key: "id",
-            },
-         }, */
       });
    },
    down: async (queryInterface, Sequelize) => {

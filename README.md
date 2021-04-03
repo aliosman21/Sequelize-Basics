@@ -21,3 +21,6 @@ npx sequelize-cli migration:generate --name add_manager_id_in_staff
 example is present in add_manager_id_in_staff.js
 
 MySQL offers EER visual diagrams in Database->ReverseEngineering
+
+
+The .sequelizerc Offers dynamic routing for all the folders, Docs are straightforward 
