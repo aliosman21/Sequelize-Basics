@@ -14,19 +14,13 @@ module.exports = {
          lastName: {
             type: Sequelize.STRING,
          },
-         email: {
-            type: Sequelize.STRING,
-         },
-         createdAt: {
-            allowNull: false,
-            type: Sequelize.DATE,
-         },
-         updatedAt: {
-            allowNull: false,
-            type: Sequelize.DATE,
-         },
-         Staff_id: {
+         user_id: {
             type: Sequelize.INTEGER,
+            references: {
+               model: "users",
+               key: "id",
+            },
+            onDelete: "CASCADE",
          },
       });
    },

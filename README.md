@@ -18,6 +18,10 @@ generate migration for adding foreign keys
 npx sequelize-cli migration:generate --name add_manager_id_in_staff
 
 
+migrate 
+
+npx sequelize-cli db:migrate
+
 example is present in add_manager_id_in_staff.js
 
 MySQL offers EER visual diagrams in Database->ReverseEngineering
@@ -30,3 +34,6 @@ The .sequelizerc Offers dynamic routing for all the folders, Docs are straightfo
 Models and Migrations are two separate things you should define foreign keys on bot like this article
 
 https://www.duringthedrive.com/2017/05/06/models-migrations-sequelize-node/
+
+
+You have to run index in models first then export it and run the queries using it to deal with models

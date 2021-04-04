@@ -1,5 +1,11 @@
 "use strict";
 const { Model } = require("sequelize");
+/* const { Sequelize, DataTypes, Model } = require("sequelize");
+const sequelize = new Sequelize("test", "root", "ali", {
+   host: "localhost",
+   dialect: "mysql",
+}); */
+
 module.exports = (sequelize, DataTypes) => {
    class User extends Model {
       /**
@@ -9,19 +15,21 @@ module.exports = (sequelize, DataTypes) => {
        */
       static associate(models) {
          // define association here
-         User.hasOne(models.manager, { foreignKey: "manager_id" });
+         // User.belongsTo(models.Manager);
       }
    }
    User.init(
       {
          firstName: DataTypes.STRING,
          lastName: DataTypes.STRING,
-         manager_id: DataTypes.INTEGER,
+         //manager_id: DataTypes.INTEGER,
       },
       {
+         timestamps: false,
          sequelize,
          modelName: "User",
       }
    );
+   //module.exports = User;
    return User;
 };
