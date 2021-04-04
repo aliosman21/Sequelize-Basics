@@ -24,3 +24,9 @@ MySQL offers EER visual diagrams in Database->ReverseEngineering
 
 
 The .sequelizerc Offers dynamic routing for all the folders, Docs are straightforward 
+
+
+
+Models and Migrations are two separate things you should define foreign keys on bot like this article
+
+https://www.duringthedrive.com/2017/05/06/models-migrations-sequelize-node/
