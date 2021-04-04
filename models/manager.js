@@ -16,11 +16,10 @@ module.exports = (sequelize, DataTypes) => {
 
       static associate(models) {
          // Manager.hasOne(models.User, { foreignKey: "user_id" });
-         Manager.belongsTo(models.User, {
-            as: "user_id",
-            foreignKey: "id",
-            constraints: false,
-         });
+         /*   Has many association
+         Manager.hasMany(models.User, {
+            foreignKey: "manager_id",
+         }); */
       }
    }
    Manager.init(

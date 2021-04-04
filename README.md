@@ -37,3 +37,12 @@ https://www.duringthedrive.com/2017/05/06/models-migrations-sequelize-node/
 
 
 You have to run index in models first then export it and run the queries using it to deal with models
+
+
+
+Association helper link 
+
+https://stackoverflow.com/questions/49945732/one-to-one-relation-using-sequelize
+
+
+The associations work in either direction

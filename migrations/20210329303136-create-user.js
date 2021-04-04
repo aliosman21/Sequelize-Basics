@@ -14,6 +14,14 @@ module.exports = {
          lastName: {
             type: Sequelize.STRING,
          },
+         manager_id: {
+            type: Sequelize.INTEGER,
+            references: {
+               model: "managers",
+               key: "id",
+            },
+            onDelete: "CASCADE",
+         },
       });
    },
    down: async (queryInterface, Sequelize) => {

@@ -14,14 +14,6 @@ module.exports = {
          lastName: {
             type: Sequelize.STRING,
          },
-         user_id: {
-            type: Sequelize.INTEGER,
-            references: {
-               model: "users",
-               key: "id",
-            },
-            onDelete: "CASCADE",
-         },
       });
    },
    down: async (queryInterface, Sequelize) => {

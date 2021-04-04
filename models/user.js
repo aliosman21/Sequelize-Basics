@@ -16,13 +16,18 @@ module.exports = (sequelize, DataTypes) => {
       static associate(models) {
          // define association here
          // User.belongsTo(models.Manager);
+         /* User.belongsTo(models.Manager, {
+            foreignKey: "id",
+            constraints: false,
+         }); */
+         /*  User.belongsTo(models.Manager, { foreignKey: "manager_id" }); */
       }
    }
    User.init(
       {
          firstName: DataTypes.STRING,
          lastName: DataTypes.STRING,
-         //manager_id: DataTypes.INTEGER,
+         manager_id: DataTypes.INTEGER,
       },
       {
          timestamps: false,
