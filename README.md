@@ -46,3 +46,9 @@ https://stackoverflow.com/questions/49945732/one-to-one-relation-using-sequelize
 
 
 The associations work in either direction
+
+
+to work with models we have to run the index.js
+
+node models/index.js
+
