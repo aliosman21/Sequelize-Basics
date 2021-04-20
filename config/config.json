@@ -5,6 +5,7 @@
       "database": "test",
       "host": "127.0.0.1",
       "port": "3307",
+      "logging": false,
       "dialect": "mysql"
    },
    "test": {

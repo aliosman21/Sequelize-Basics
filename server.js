@@ -10,8 +10,28 @@ const db = require("./models/index");
       //console.log("Manager Created");
       //const Ali = await db.Manager.create({ firstName: "Ali", user_id: 1 });
       //console.log("User Created");
-      const tasks = await db.User.findAll({ include: [{ all: true }] });
-      console.log(JSON.stringify(tasks, null, 2));
+      //----------------------------------------------LAZY LOADING--------------------------------------\\
+      /*     const awesomeCaptain = await db.User.findOne({
+         where: {
+            firstName: "mona",
+         },
+      });
+      console.log(awesomeCaptain.firstName);
+      const hisShip = await awesomeCaptain.getManager();
+      console.log(hisShip.firstName); */
+      //----------------------------------------------LAZY LOADING--------------------------------------\\
+      //----------------------------------------------EAGER LOADING--------------------------------------\\
+      /* const awesomeCaptain = await db.User.findOne({
+         where: {
+            firstName: "mona",
+         },
+         include: db.Manager,
+      });
+      console.log(awesomeCaptain.firstName);
+      console.log(awesomeCaptain.Manager.firstName); */
+      //----------------------------------------------EAGER LOADING--------------------------------------\\
+      //const tasks = await db.User.findAll({ include: [{ all: true }] });
+      //console.log(JSON.stringify(tasks, null, 2));
    } catch (error) {
       console.error("Unable to connect to the database:", error);
    }
