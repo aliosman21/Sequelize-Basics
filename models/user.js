@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "id",
             constraints: false,
          }); */
-         /*  User.belongsTo(models.Manager, { foreignKey: "manager_id" }); */
+         User.belongsTo(models.Manager, { foreignKey: "manager_id" });
       }
    }
    User.init(

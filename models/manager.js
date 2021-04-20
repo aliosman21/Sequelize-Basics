@@ -16,10 +16,10 @@ module.exports = (sequelize, DataTypes) => {
 
       static associate(models) {
          // Manager.hasOne(models.User, { foreignKey: "user_id" });
-         /*   Has many association
+         /*   Has many association*/
          Manager.hasMany(models.User, {
             foreignKey: "manager_id",
-         }); */
+         });
       }
    }
    Manager.init(

@@ -1,10 +1,11 @@
+/*jshint esversion:8 */
 const db = require("./models/index");
 
 (async () => {
    try {
-      // const ali = await db.Manager.create({ firstName: "Ali", lastName: "Osman" });
-      //const jane = await db.User.create({ firstName: "jane", manager_id: 1 });
-      //const mona = await db.User.create({ firstName: "mona", manager_id: 1 });
+      /*   const ali = await db.Manager.create({ firstName: "Ali", lastName: "Osman" });
+      const jane = await db.User.create({ firstName: "jane", manager_id: 1 });
+      const mona = await db.User.create({ firstName: "mona", manager_id: 1 }); */
       //db.User.sync();
       //console.log("Manager Created");
       //const Ali = await db.Manager.create({ firstName: "Ali", user_id: 1 });
