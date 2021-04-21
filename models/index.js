@@ -8,12 +8,16 @@ const env = process.env.NODE_ENV || "development";
 const config = require(__dirname + "/../config/config.json")[env];
 const db = {};
 
+//const initModels = require("../Auto Models/init-models"); //auto models
+
 let sequelize;
 if (config.use_env_variable) {
    sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
    sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
+
+//const models = initModels(sequelize);
 
 fs.readdirSync(__dirname)
    .filter((file) => {
@@ -32,5 +36,6 @@ Object.keys(db).forEach((modelName) => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+//module.exports = models; //auto load models
 
 module.exports = db;

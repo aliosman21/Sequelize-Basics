@@ -30,6 +30,10 @@ const db = require("./models/index");
       console.log(awesomeCaptain.firstName);
       console.log(awesomeCaptain.Manager.firstName); */
       //----------------------------------------------EAGER LOADING--------------------------------------\\
+      //--------------------------------------------------------------------------------------------------
+      // const tasks = await db.users.findAll({ include: [{ all: true }] }); // auto load models
+      // console.log(JSON.stringify(tasks, null, 2)); //auto load models
+      //--------------------------------------------------------------------------------------------------
       //const tasks = await db.User.findAll({ include: [{ all: true }] });
       //console.log(JSON.stringify(tasks, null, 2));
    } catch (error) {
