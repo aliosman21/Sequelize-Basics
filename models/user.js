@@ -27,7 +27,8 @@ module.exports = (sequelize, DataTypes) => {
       {
          firstName: DataTypes.STRING,
          lastName: DataTypes.STRING,
-         manager_id: DataTypes.INTEGER,
+         //You don't need to set a manager_id column if you have an association like in line 23 it still works
+         // manager_id: DataTypes.INTEGER,
       },
       {
          timestamps: false,
